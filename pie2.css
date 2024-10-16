@@ -1,0 +1,41 @@
+.social {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+footer {
+    background-color: rgba(43, 42, 42, 0.8);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer-info, 
+.social {
+    width: 45%; 
+}
+
+@media (max-width: 768px) {
+    .social {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .footer-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
