@@ -1,0 +1,101 @@
+.contacto {
+    display: grid;
+    padding: 80px;
+    gap: 20px;
+    align-items: start;
+    justify-content: center;
+}
+
+.datos-contacto {
+    font-size: 14px;
+    margin-bottom: 20px;
+ 
+    img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.datos {
+    display: flex;
+    margin-top: 10px;
+
+    p {
+        margin: 10px;
+    }
+}
+
+.atencion {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cita {
+    display: inline;
+}
+
+.cita-caja {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.cita-nombre, .cita-apellido, .cita-email, .cita-fecha {
+    width: 50%;
+}
+
+textarea {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid rgba(204, 204, 204, 0.6);
+    border-radius: 5px;
+}
+
+.datos-contacto, .atencion, .cita {
+    color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input, 
+textarea {
+    width: 80%;
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid rgba(204, 204, 204, 0.6);
+    border-radius: 5px;
+    background-color: rgba(87, 82, 82, 0.489);
+    color: #756d6d;
+}
+
+@media (max-width: 768px) {
+    .contactos {
+        padding: 20px;
+    }
+
+    .cita-caja {
+        flex-direction: column; 
+    }
+
+    .cita-nombre, .cita-apellido, .cita-email, .cita-fecha {
+        width: 100%; 
+    }
+
+    .datos {
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
+
+@media(min-width: 1350px){
+    .contacto {
+        padding: auto;
+        grid-gap: 40px;
+
+    }
+}

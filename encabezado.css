@@ -1,0 +1,95 @@
+header {
+    z-index: 10;
+    position: relative; /* Asegúrate de que el encabezado esté en el contexto de apilamiento */
+}
+
+nav {
+    position: relative;
+    background: hsl(0, 0%, 0%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 2%;
+    height: 80px;
+    min-width: 250px;
+}
+
+nav img {
+    height: 80px;
+    width: 140px;
+}
+
+nav h1 {
+    font-weight: bold;
+    color: #c6c0c0;
+    display: block; /* Mantenemos el título en block para que pueda ocultarse fácilmente */
+}
+
+nav a {
+    color: #c6c0c0; /* Color del texto del enlace */
+}
+
+nav a:hover {
+    color: #bebebe;
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Espacio entre elementos del menú */
+}
+
+nav li {
+    margin-left: 10px;
+}
+
+.menulabel {
+    display: none; /* Oculta el botón por defecto */
+    cursor: pointer;
+    color: #c6c0c0;
+    font-size: 24px;
+}
+
+#navMenu {
+    display: flex; /* Mantiene el menú en línea en pantallas grandes */
+}
+
+@media (max-width: 830px) {
+    nav {
+        flex-direction: row; /* Mantiene los elementos en fila */
+        align-items: center; 
+        padding: 20px;
+    }
+
+    #navTitle {
+        display: none; /* Oculta el título en resoluciones pequeñas */
+    }
+
+    .menulabel {
+        display: block; /* Muestra el botón de menú */
+    }
+
+    #navMenu {
+        display: none; /* Oculta el menú por defecto */
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        position: absolute; /* Permite que el menú se superponga */
+        top: 100px; /* Coloca el menú debajo del logo */
+        width: 100%; /* Asegura que ocupe el ancho completo */
+        background-color: hsl(0, 0%, 10%); /* Color de fondo para el menú desplegable */
+        transition: max-height 0.3s ease; /* Añadir transición */
+        overflow: hidden; /* Oculta el contenido desbordante */
+        max-height: 0; /* Establece la altura máxima en 0 para ocultar el menú */
+    }
+}
+
+@media (min-width: 831px) {
+    #navMenu {
+        display: flex; /* Muestra el menú en su forma horizontal */
+    }
+
+    .menulabel {
+        display: none; /* Oculta el botón en pantallas grandes */
+    }
+}

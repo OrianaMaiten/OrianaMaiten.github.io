@@ -1,0 +1,110 @@
+#cli {
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 90%, rgb(0, 0, 0) 100%);
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.clientes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding: 40px;
+}
+
+.cliente {
+    display: flex;
+    position: relative;
+    margin: 15px;
+    cursor: default;
+    transition: margin-left 0.3s;
+}
+
+.cliente img {
+    width: 250px; 
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.cliente:hover img {
+    transform: scale(1.1);
+}
+
+.reseña {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "DM serif Display", serif;
+    font-size: 10px;
+    backdrop-filter: blur(5px);
+    color: #000000;
+    padding: 20px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    opacity: 0; 
+    transition: opacity 0.3s;
+}
+
+.cliente:hover .reseña {
+    opacity: 1; 
+}
+
+.cliente:hover ~ .cliente {
+    margin-left: 20px;
+}
+
+@media (max-width: 1030px) {
+    .clientes {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .cliente {
+        margin: 10px 0; 
+        width: 80%; 
+    }
+
+    .cliente img {    
+        width: 150px; /* Cambiado a un tamaño más pequeño */
+        height: auto; 
+        max-width: 100%; /* Asegura que no exceda el contenedor */
+    }
+
+    .reseña {
+        position: static; 
+        margin-top: 10px;
+        opacity: 1;
+        transform: none;
+        font-size: 8px; /* Reducción del tamaño de fuente */
+        padding: 10px; /* Menos padding para que se adapte mejor */
+    }
+}
+
+@media (max-width: 600px) {
+    .clientes {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .cliente {
+        flex-direction: column; 
+        align-items: center;    
+        text-align: center; 
+        margin: 10px 0;
+    }
+
+    .cliente img {
+        max-width: 80px;  
+        max-height: 80px; 
+    }
+
+    .reseña {
+        font-size: 8px;    
+        padding: 10px;     
+        opacity: 1;        
+        margin-top: 5px;
+    }
+}
+
