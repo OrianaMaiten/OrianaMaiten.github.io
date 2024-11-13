@@ -1,0 +1,193 @@
+/* Resetear márgenes y padding de todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general de la página */
+body {
+    background-color: rgb(0, 0, 0); /* Fondo oscuro */
+    margin: 0;
+    margin-right: 1px;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+/* Estilo del scrollbar */
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(255, 136, 0, 0.044);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: hsl(38, 83%, 23%);
+    border-radius: 10px;
+}
+
+/* Estilo de los encabezados */
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Estilo de los párrafos y preformatos */
+p, pre {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+/* Estilo para enlaces */
+a {
+    font-family: 'DM Serif Display', serif;
+    color: #ff8c00; /* Color anaranjado */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff; /* Cambio de color al pasar el ratón */
+}
+
+/* Listas */
+ul {
+    font-family: 'DM Serif Display', serif;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para las secciones (como presentaciones, equipo, etc.) */
+section {
+    padding: 40px 20px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ff8c00;
+}
+
+/* Diseño de las secciones de presentación y contenido */
+.inicio, .nosotros, .clie, .contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Diseño de las imágenes (sección de imágenes) */
+.imagenes img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+/* Estilos para los iframes */
+iframe {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 100%;
+    width: 800px;
+}
+
+/* Estilo para el contenedor de logos o imágenes destacadas */
+.logo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsividad: cuando la pantalla es pequeña (tabletas y móviles) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+/* Animación para los artículos al aparecer */
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: scale(0.75);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+article {
+    animation: show 1s ease-out;
+}
+
+/* Estilo para los artículos cuando aparecen al hacer scroll */
+article {
+    animation-name: show;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+/* Estilo para las cajas de texto de los artículos (contenido) */
+article p, article ul {
+    margin-left: 20px;
+}
+
