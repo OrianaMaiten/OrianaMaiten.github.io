@@ -109,11 +109,11 @@ a:hover {
 
 /* Iframes */
 iframe {
-    width: 100%;
+    width: 50%;
     border: none;
     margin-top: 20px;
     border-radius: 8px;
-    height: 400px;
+    height: 600px;
 }
 
 /* Footer */
